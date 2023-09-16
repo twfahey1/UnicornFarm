@@ -33,6 +33,8 @@ func _process(delta):
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.flip_v = velocity.y < 0
 
+	position += velocity * delta
+	position = position.clamp(Vector2.ZERO, screen_size)
 
 func _on_body_entered(body):
 	hide() # Player disappears after being hit.
