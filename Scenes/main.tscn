@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://402bu0hegljn"]
+
+[ext_resource type="Script" path="res://Scripts/Node2D.gd" id="1_0atb2"]
+[ext_resource type="Texture2D" uid="uid://ck0o0xxqjukcc" path="res://Assets/tylerfahey_graphics_for_a_game_pixel_art_a_unicorn_with_rainbow_9c3c96ae-84d8-40c6-8c9a-7829b6bdfbc9.png" id="2_xmlfi"]
+[ext_resource type="Script" path="res://Scripts/MainUnicorn.gd" id="3_nsmcu"]
+
+[node name="MainNode" type="Node2D"]
+script = ExtResource("1_0atb2")
+
+[node name="MainUnicorn" type="Sprite2D" parent="."]
+position = Vector2(226, 279)
+scale = Vector2(0.314941, 0.314941)
+texture = ExtResource("2_xmlfi")
+script = ExtResource("3_nsmcu")
+
+[node name="Label" type="Label" parent="MainUnicorn"]
+offset_left = 638.214
+offset_top = -641.389
+offset_right = 840.214
+offset_bottom = -618.389

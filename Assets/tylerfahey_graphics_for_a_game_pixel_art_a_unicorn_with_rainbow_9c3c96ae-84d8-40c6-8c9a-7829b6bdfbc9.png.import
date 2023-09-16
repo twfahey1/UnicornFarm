@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i35yonubgniu"
-path="res://.godot/imported/butter.png-8270efde62b11a777190495ef76eb3d8.ctex"
+uid="uid://ck0o0xxqjukcc"
+path="res://.godot/imported/tylerfahey_graphics_for_a_game_pixel_art_a_unicorn_with_rainbow_9c3c96ae-84d8-40c6-8c9a-7829b6bdfbc9.png-7c9017b1121c9ea78896db3cfa8c2a89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://butter.png"
-dest_files=["res://.godot/imported/butter.png-8270efde62b11a777190495ef76eb3d8.ctex"]
+source_file="res://Assets/tylerfahey_graphics_for_a_game_pixel_art_a_unicorn_with_rainbow_9c3c96ae-84d8-40c6-8c9a-7829b6bdfbc9.png"
+dest_files=["res://.godot/imported/tylerfahey_graphics_for_a_game_pixel_art_a_unicorn_with_rainbow_9c3c96ae-84d8-40c6-8c9a-7829b6bdfbc9.png-7c9017b1121c9ea78896db3cfa8c2a89.ctex"]
 
 [params]
 
