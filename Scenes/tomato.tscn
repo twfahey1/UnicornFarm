@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvcuixbrbbem5"]
+
+[ext_resource type="Script" path="res://Mob.gd" id="1_shyku"]
+[ext_resource type="Texture2D" uid="uid://dlq6ufsgr7k14" path="res://Assets/tylerfahey_graphics_for_a_game_pixel_art_a_tomato_958f9d18-b392-48c3-b761-0156b7a7d9f8.png" id="2_vnory"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pag1f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b35xh"]
+radius = 72.3395
+
+[node name="Mob" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 2.66454e-15
+script = ExtResource("1_shyku")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_pag1f")
+
+[node name="Tomato" type="Sprite2D" parent="."]
+position = Vector2(108, 105)
+scale = Vector2(0.199219, 0.199219)
+texture = ExtResource("2_vnory")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(92, 106)
+shape = SubResource("CircleShape2D_b35xh")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
