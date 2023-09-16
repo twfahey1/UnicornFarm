@@ -12,3 +12,12 @@ func _process(delta):
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
+
+# WHen the "hit()" event is emitted, we want to queue_free() the mob
+func _on_Area2D_area_entered(area):
+	if area.name == "Player":
+		area.get_parent().hit()
+		queue_free()
+		
+	
+

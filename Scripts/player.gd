@@ -37,8 +37,12 @@ func _process(delta):
 	position = position.clamp(Vector2.ZERO, screen_size)
 
 func _on_body_entered(body):
-	hide() # Player disappears after being hit.
-	hit.emit()
+	#hide() # Player disappears after being hit.
+	# hit.emit()
+	# If we enter a "Mob" body, queue it for removal.
+	if body.name == "Mob":
+		body.queue_free()
+		
 	# Must be deferred as we can't change physics properties on a physics callback.
 	$CollisionShape2D.set_deferred("disabled", true)
 	
