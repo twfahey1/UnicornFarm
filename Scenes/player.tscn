@@ -1,15 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1dmhisdngbpe"]
+[gd_scene load_steps=5 format=3 uid="uid://c1dmhisdngbpe"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_2xn1n"]
-[ext_resource type="Texture2D" uid="uid://dlq6ufsgr7k14" path="res://Assets/tylerfahey_graphics_for_a_game_pixel_art_a_tomato_958f9d18-b392-48c3-b761-0156b7a7d9f8.png" id="1_cno5b"]
 [ext_resource type="Texture2D" uid="uid://ck0o0xxqjukcc" path="res://Assets/tylerfahey_graphics_for_a_game_pixel_art_a_unicorn_with_rainbow_9c3c96ae-84d8-40c6-8c9a-7829b6bdfbc9.png" id="2_leq3f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t3uck"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_cno5b")
-}, {
 "duration": 1.0,
 "texture": ExtResource("2_leq3f")
 }],
@@ -20,9 +16,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_leq3f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_cno5b")
 }],
 "loop": true,
 "name": &"walk",
@@ -32,14 +25,18 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmmjk"]
 
 [node name="Player" type="Area2D"]
+position = Vector2(596, 324)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_2xn1n")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_t3uck")
-animation = &"up"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qmmjk")
 debug_color = Color(0.862745, 0, 0.870588, 0.419608)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="hit" from="." to="." method="_on_hit"]
